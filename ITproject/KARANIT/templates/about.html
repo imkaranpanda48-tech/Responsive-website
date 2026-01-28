@@ -1,0 +1,96 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}About | KaranWeb-IT {% endblock %}
+{% block nav_about %}active{% endblock %} 
+
+{% block content %}
+{% block extra_css %}
+ <style>
+        body {
+            background-color: #fdfdfd;
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 18px;
+        }
+        .hero-section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .learn-btn {
+            background-color: #1aa5a5;
+            padding: 12px 32px;
+            font-size: 18px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+        }
+        .learn-btn:hover {
+            background-color: #148787;
+            color: white;
+        }
+
+        /* Navbar underline effect */
+        .nav-link {
+            position: relative;
+            font-size: 17px;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: #0d9488;
+            transition: 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+    {% endblock %}
+
+
+    
+
+    <!-- About -->
+    <section class="section about__v11" id="about">
+      <div class="container">
+
+        <div class="row justify-content-between g-3">
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <h2 class="fw-bold mb-4">Start Better Learning Future From Here</h2>
+            <p>
+              Empower your learning journey with modern, practical knowledge 
+              designed for real-world success.
+            </p>
+            <a class="btn btn-primary mt-3" href="/about/">Learn More</a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-3">
+
+              <div class="col-6 text-end">
+                <img class="img-fluid rounded-4 mt-5" src="{% static 'assets/images/image.png' %}">
+              </div>
+
+              <div class="col-6">
+                <img class="img-fluid rounded-4" src="{% static 'assets/images/image3.png' %}">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End About -->
+    
+
+{% endblock %}

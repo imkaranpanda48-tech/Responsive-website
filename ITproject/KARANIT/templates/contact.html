@@ -1,0 +1,113 @@
+{% extends 'master.html' %}
+
+{% block title %}Contact | KaranWeb-IT{% endblock %}
+{% block nav_contact %}active{% endblock %}
+
+{% block content %}
+
+<div class="section contact__v5" id="contact">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 mb-4" data-aos="fade-up">
+                <h2 class="fw-bold mb-4">Contact Us</h2>
+            </div>
+
+            <div class="col-md-6 mb-5">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex align-items-start gap-3" data-aos="fade-up">
+                        <i class="bi bi-telephone fs-5"></i>
+                        <div>
+                            <span class="fw-semibold">Phone</span><br>
+                            <span>+91 987654321</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="100">
+                        <i class="bi bi-send fs-5"></i>
+                        <div>
+                            <span class="fw-semibold">Email</span><br>
+                            <span>info@mydomain.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="200">
+                        <i class="bi bi-geo-alt fs-5"></i>
+                        <div>
+                            <span class="fw-semibold">Address</span>
+                            <address class="mb-0">
+                                123 Main Street, Govindpura<br>
+                                Jaipur, Rajasthan
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start gap-3" data-aos="fade-up" data-aos-delay="300">
+                        <i class="bi bi-globe2 fs-5"></i>
+                        <div>
+                            <span class="fw-semibold">Website</span><br>
+                            <span>www.mywebsite.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="social mt-4" data-aos="fade-up">
+                    <ul class="list-unstyled d-flex gap-2 flex-row flex-wrap">
+                        <li><a class="social-link" href="#"><i class="bi bi-twitter-x"></i></a></li>
+                        <li><a class="social-link" href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a class="social-link" href="#"><i class="bi bi-youtube"></i></a></li>
+                        <li><a class="social-link" href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a class="social-link" href="#"><i class="bi bi-pinterest"></i></a></li>
+                        <li><a class="social-link" href="#"><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="rounded-5 form-wrapper" data-aos="fade-up">
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label class="mb-2">Name</label>
+                                <input class="form-control" type="text" name="name" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label class="mb-2">Email</label>
+                                <input class="form-control" type="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="mb-2">Subject</label>
+                            <input class="form-control" type="text" name="subject">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="mb-2">Message</label>
+                            <textarea class="form-control" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button class="btn btn-primary w-100 fw-semibold" type="submit">Send Message</button>
+                    </form>
+
+                    {% if success %}
+                        <div class="alert alert-success mt-3">Message sent successfully!</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
