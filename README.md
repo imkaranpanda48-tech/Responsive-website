@@ -44,4 +44,30 @@ The website represents my professional journey, skills, and thoughts through blo
 ---
 
 ## 📂 Project Structure
+ITproject/
+|── KaranIT/
+    │── templates/
+        │── static/assests
+│── db.sqlite3
+│── manage.py
+│── README.md
 
+---
+
+##🎯 Purpose of This Project
+
+- Personal branding and online presence
+
+- Blog platform to share thoughts and experiences
+
+- Demonstrate Django backend and admin panel usage
+
+- Portfolio project for internships and entry-level developer roles
+
+---
+
+##👨‍💻 Author
+
+Karan Panda
+Web Developer | Django Backend & Full-Stack Enthusiast
+https://www.linkedin.com/in/karan-panda-57ba373a7
