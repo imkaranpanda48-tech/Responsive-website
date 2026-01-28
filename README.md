@@ -54,7 +54,7 @@ ITproject/
 
 ---
 
-##🎯 Purpose of This Project
+## 🎯 Purpose of This Project
 
 - Personal branding and online presence
 
@@ -66,14 +66,14 @@ ITproject/
 
 ---
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
-Karan Panda
+## Karan Panda
 Web Developer | Django Backend & Full-Stack Enthusiast
-- Linkedin -https://www.linkedin.com/in/karan-panda-57ba373a7
+ Linkedin -https://www.linkedin.com/in/karan-panda-57ba373a7
 
 
-##💻Project-Output
+## 💻Project-Output
 
 -> **Home**
 
